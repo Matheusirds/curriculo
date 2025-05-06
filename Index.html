@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Currículo - Matheus Isaac</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <nav>
+    <a href="#" onclick="mostrarAba('curriculo')">Currículo</a>
+    <a href="#" onclick="mostrarAba('section')">Contato</a>
+  </nav>
+  
+  <!-- Tela de Boas-Vindas -->
+ <div id="welcomeMessage">
+  <p>Bem-vindo!</p>
+</div>
+
+  <div class="container">
+    <div class="header">
+      <img id="profilePhoto" src="Foto perfil.jpg" alt="Foto do candidato" />
+      <div>
+        <h1>Matheus Isaac Ramalho da Silva</h1>
+        <strong>Analista de Monitoramento Pleno</strong>
+        <p class="contact">matheusirds@hotmail.com | (11) 93927-7948 | Santo André/SP</p>
+        <p>Linkedin, <a href="https://www.linkedin.com/in/matheus-isaac-4ba068ab/" target="_blank">clique aqui</a>.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Objetivo</h2>
+      <p>Atuar na área de tecnologia com foco em crescimento profissional e contribuição efetiva para a equipe.</p>
+    </div>
+
+    <div class="section">
+      <h2>Experiência Profissional</h2>
+      <p><strong>Stefanini</strong> - Analista de Monitoramento (08/2022 - 10/2024)</p>
+      <p><strong>Digisystem</strong> - Analista de Monitoramento Pleno (10/2024 - atual)</p>
+    </div>
+
+    <div class="section">
+      <h2>Formação Acadêmica</h2>
+      <p><strong>UNIP</strong> - Bacharel em Ciência da Computação (Cursando)</p>
+      <p><strong>Previsão de Conclusão:</strong> 2028</p>
+    </div>
+
+    <div class="section">
+      <h2>Habilidades</h2>
+      <ul>
+        <li>Comunicação eficaz</li>
+        <li>HTML, CSS, JavaScript, Zabbix, Datadog, Meraki, JIRA, Grafana</li>
+        <li>Pacote Office</li>
+        <li>Trabalho em equipe</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Idiomas</h2>
+      <ul>
+        <li>Português — Nativo</li>
+        <li>Inglês — Básico</li>
+      </ul>
+     
+        <div class="section">
+          <h2>Entre em Contato</h2>
+          <center>
+            <form action="https://formsubmit.co/matheusirdss@gmail.com" method="POST">
+      
+              <input type="text" name="nome" placeholder="Seu nome" required />
+              <input type="email" name="email" placeholder="Seu e-mail" required />
+              <input type="tel" name="telefone" placeholder="Seu telefone" required />
+              <textarea name="mensagem" placeholder="Digite aqui sua mensagem" required></textarea>
+              <input type="submit" value="Enviar">      
+            </form>
+          </center>
+        </div>
+        
+     <http class="server"></http>
+   </div>
+   
+    </div>
+  </div>
+
+  <!-- Modal da Imagem -->
+  <div id="imageModal">
+    <span id="closeModal">&times;</span>
+    <img id="modalImage" />
+  </div>
+
+  <!-- Widget WhatsApp -->
+  <script>
+    (function () {
+      const script = document.createElement('script');
+      script.src = 'https://cdn.waplus.io/waplus-crm/settings/ossembed.js';
+      script.async = true;
+
+      const options = {
+        enabled: true,
+        chatButtonSetting: {
+          backgroundColor: "#16BE45",
+          ctaText: "",
+          borderRadius: "50",
+          marginLeft: "20",
+          marginBottom: "20",
+          marginRight: "20",
+          position: "right",
+          textColor: "#ffffff",
+          phoneNumber: "+5511939277948",
+          messageText: "Olá, estou entrando em contato pelo seu currículo!",
+          trackClick: true
+        }
+      };
+
+      script.onload = function () {
+        CreateWhatsappBtn(options);
+        const interval = setInterval(() => {
+          const btn = document.querySelector('div[style*="position: fixed"]');
+          if (btn) {
+            btn.classList.add('whatsapp-button-animate');
+            clearInterval(interval);
+          }
+        }, 500);
+      };
+
+      document.head.appendChild(script);
+    })();
+  </script>
+
+  <script src="app.js"></script>
+</body>
+</html>
